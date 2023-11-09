@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import BgShort from '../../images/BgShort.mp4';
+// import BgShort from '../../images/BgShort.mp4';
 import {
   Heading,
   Flex,
@@ -135,13 +135,13 @@ export default function HomePage() {
             </VStack>
           </Center>
 
-          <Center
+          {/* <Center
             maxW="800px"
             m="auto"
             boxShadow="0 0 7px #98e4ff, 0 0 10px #98e4ff, 0 0 21px #98e4ff, 0 0 42px #ffffff, 0 0 82px #fff, 0 0 92px #fff, 0 0 102px #fff, 0 0 151px #fff"
           >
             <video title="videoBg" src={BgShort} autoPlay muted />
-          </Center>
+          </Center> */}
         </Box>
       )}
     </>

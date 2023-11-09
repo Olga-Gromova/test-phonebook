@@ -33,7 +33,11 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <Box as="main" bg="#98b7d545" h="100vh">
+    <Box
+      as="main"
+      bg="#98b7d545"
+      // h="100vh"
+    >
       <Container maxW="100%" marginX="auto" paddingX="10px" bg="#98b7d545">
         <Heading
           align="center"
