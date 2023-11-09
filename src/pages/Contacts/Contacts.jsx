@@ -36,7 +36,7 @@ export default function Contacts() {
     <Box
       as="main"
       bg="#98b7d545"
-      // h="100vh"
+      h="100vh"
     >
       <Container maxW="100%" marginX="auto" paddingX="10px" bg="#98b7d545">
         <Heading

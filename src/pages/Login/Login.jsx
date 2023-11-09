@@ -7,7 +7,7 @@ export default function Login() {
       as="main"
       paddingY="50px"
       bg="#98b7d545"
-      // h="100vh"
+      h="100vh"
     >
       <Container as="section">
         <LoginForm />
