@@ -38,7 +38,8 @@ export const UserMenu = () => {
           </Flex>
           <Circle
             size="30px"
-            bg="#A64452"
+            bg="#8349b5"
+          
             type="button"
             onClick={handleLogOut}
             _hover={{
@@ -77,7 +78,7 @@ export const UserMenu = () => {
             fontFamily="Merriweather Sans"
             fontSize="24px"
             fontWeight={'bold'}
-            backgroundColor="#A64452"
+            backgroundColor="#8349b5"
             _hover={{
               bg: '#0cc0df',
               borderColor: 'transparent',

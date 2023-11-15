@@ -10,7 +10,9 @@ import {
   Button,
   CircularProgress,
   useToast,
+  Icon,
 } from '@chakra-ui/react';
+import { IoPersonAddOutline } from 'react-icons/io5';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -108,18 +110,22 @@ export const ContactForm = () => {
     <Box
       as="form"
       maxWidth="660px"
-      width="50%"
+      width="100%"
       minWidth="200px"
       padding="10px"
       onSubmit={handleSubmit}
       textAlign="center"
+      display="flex"
+      gap="15px"
+      alignItems="center"
     >
-      <FormControl isRequired mb="32px">
+      <FormControl isRequired>
         <FormLabel
           fontFamily="Merriweather Sans"
           fontWeight={400}
           fontSize={{ base: '18px', md: '24px' }}
           color="#497a86"
+          mb="auto"
         >
           Name
         </FormLabel>
@@ -138,12 +144,13 @@ export const ContactForm = () => {
           placeholder="Enter name"
         />
       </FormControl>
-      <FormControl isRequired mb="32px">
+      <FormControl isRequired>
         <FormLabel
           fontFamily="Merriweather Sans"
           fontWeight={400}
           fontSize={{ base: '18px', md: '24px' }}
           color="#497a86"
+          mb="auto"
         >
           Number
         </FormLabel>
@@ -162,22 +169,24 @@ export const ContactForm = () => {
         />
       </FormControl>
       <Button
-        fontFamily="Merriweather Sans"
-        fontWeight="bold"
-        fontSize="18px"
+        borderRadius="50%"
+        mt="auto"
+        w={{ base: '30px', md: '50px' }}
+        h={{ base: '30px', md: '50px' }}
+        minWidth="auto"
+        bg="#80B3FF"
+        color="white"
+        _hover={{
+          bg: '#0cc0df',
+          borderColor: 'transparent',
+          color: '#fff',
+        }}
         type="submit"
-        paddingX="20px"
-        paddingY="12px"
-        w="160px"
-        borderColor="#89d3da"
-        borderWidth="1px"
-        color="#192655"
-        _hover={{ bg: '#0cc0df', borderColor: 'transparent', color: '#fff' }}
       >
         {!isContactAdded ? (
           <CircularProgress isIndeterminate size="24px" color="#188C69" />
         ) : (
-          'Add contact'
+          <Icon as={IoPersonAddOutline} w={5} h={5} color="white" />
         )}
       </Button>
     </Box>

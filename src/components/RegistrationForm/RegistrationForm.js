@@ -10,6 +10,7 @@ import {
   useToast,
   Icon,
   Container,
+  Text,
 } from '@chakra-ui/react';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -68,8 +69,7 @@ export const RegistrationForm = () => {
               borderRadius="10px"
               textAlign="center"
             >
-              Please, check again - user with email {data.email} have alredy was
-              created eariler
+              Please, check again - user with email <Text as="b" color="green">{data.email}</Text> or with name <Text as="b" color="green"> {data.name} </Text> have already created earlier
             </Box>
           ),
         });
@@ -142,14 +142,17 @@ export const RegistrationForm = () => {
             bg="transparent"
             position="absolute"
             right="0px"
+            _hover={{ bg: 'transparent', borderColor: 'transparent', color: '#192655' }}
+            _active={{ bg: 'transparent', borderColor: 'transparent', color: '#192655' }}
+            _focus={{ bg: 'transparent', borderColor: 'transparent', color: '#192655' }}
             onClick={() =>
               toggleClick(toggleInput, setToggleInput, setToggleIcon)
             }
           >
             {toggleIcon ? (
-              <Icon as={RiEyeOffLine} w={8} h={8} fill="#192655" />
+              <Icon as={RiEyeOffLine} w={8} h={8} fill="#192655" background="transparent"/>
             ) : (
-              <Icon as={RiEyeLine} w={8} h={8} fill="#192655" />
+              <Icon as={RiEyeLine} w={8} h={8} fill="#192655" background="transparent"/>
             )}
           </Button>
 

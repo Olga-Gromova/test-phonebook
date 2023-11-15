@@ -33,29 +33,15 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <Box
-      as="main"
-      bg="#98b7d545"
-      h="100vh"
-    >
-      <Container maxW="100%" marginX="auto" paddingX="10px" bg="#98b7d545">
-        <Heading
-          align="center"
-          pt="10px"
-          mb="10px"
-          fontFamily="Merriweather Sans"
-          fontWeight={400}
-          fontSize={isTabletOrMobile ? '18px' : '30px'}
-          color="#497a86"
-        >
-          Welcom in your Personal Phonebook
-        </Heading>
+    <Box as="main" bg="#98b7d545" h="100vh">
+      <Container maxW="100%" marginX="auto" paddingX="10px">
         <Box gap="5px" justifyItems="center" display="grid">
           <Heading
+            marginTop="10px"
             align="center"
             fontFamily="Merriweather Sans"
             fontWeight={400}
-            fontSize={isTabletOrMobile ? '16px' : '28px'}
+            fontSize={{ base: '16px', md: '24px' }}
             color="#497a86"
           >
             Please, input name & number for a creation a new contact
@@ -103,7 +89,7 @@ export default function Contacts() {
 
                 {error && <p>Something goes wrong</p>}
                 {!isLoading && contacts.length > 0 && (
-                  <Box overflowY="auto" h="230px">
+                  <Box overflowY="auto" h="100vh">
                     <ContactList />
                   </Box>
                 )}

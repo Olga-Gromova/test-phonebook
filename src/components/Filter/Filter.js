@@ -14,7 +14,7 @@ export const Filter = () => {
       <Text
         fontFamily="Merriweather Sans"
         fontWeight={300}
-        fontSize={{ base: '18px', md: '24px' }}
+        fontSize={{ base: '16px', md: '24px' }}
         color="#497a86"
       >
         Find contacts by name:
