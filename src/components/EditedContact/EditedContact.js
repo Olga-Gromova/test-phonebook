@@ -52,6 +52,14 @@ const EditContact = ({ id, toggleEdit, name, number }) => {
           borderColor: '#3182ce',
           boxShadow: '0px 0px 10px 5px rgba(0, 0, 255, 0.4)',
         }}
+        _focus={{
+          borderColor: '#3182ce',
+          boxShadow: '0px 0px 10px 5px rgba(0, 0, 255, 0.4)',
+        }}
+        _active={{
+          borderColor: '#3182ce',
+          boxShadow: '0px 0px 10px 5px rgba(0, 0, 255, 0.4)',
+        }}
         type="text"
         {...register('name')}
         autoFocus
@@ -71,6 +79,14 @@ const EditContact = ({ id, toggleEdit, name, number }) => {
         borderRadius="20px"
         color="#192655"
         _hover={{
+          borderColor: '#3182ce',
+          boxShadow: '0px 0px 10px 5px rgba(0, 0, 255, 0.4)',
+        }}
+        _focus={{
+          borderColor: '#3182ce',
+          boxShadow: '0px 0px 10px 5px rgba(0, 0, 255, 0.4)',
+        }}
+        _active={{
           borderColor: '#3182ce',
           boxShadow: '0px 0px 10px 5px rgba(0, 0, 255, 0.4)',
         }}

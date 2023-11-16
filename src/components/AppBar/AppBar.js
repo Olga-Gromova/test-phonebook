@@ -15,9 +15,11 @@ export const AppBar = () => {
       p={{ base: '10px', md: '16px' }}
       bg="#b3d9f3"
     >
+      <Spacer />
       <Navigation />
       <Spacer />
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      <Spacer />
     </Flex>
   );
 };

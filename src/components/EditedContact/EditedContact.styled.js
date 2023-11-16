@@ -25,7 +25,7 @@ export const FormStyled = styled.form`
 
     &:hover,
     &:focus,
-    &:active {
+    &:active, {
       background-color: #0cc0df;
       color: white;
       box-shadow: 0px 0px 10px 5px rgba(0, 0, 255, 0.4);

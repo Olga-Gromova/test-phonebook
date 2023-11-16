@@ -8,9 +8,12 @@ import {
   Text,
   Box,
   Center,
+  Image,
+  Highlight,
 } from '@chakra-ui/react';
 import { selectIsLoading } from 'redux/contacts/selectors';
 import { NavLink } from 'react-router-dom';
+import bg from '../../images/bg.png';
 
 export default function HomePage() {
   const isLoading = useSelector(selectIsLoading);
@@ -40,11 +43,11 @@ export default function HomePage() {
               gap={{ base: '10px', md: '22px' }}
               mw="400px"
               mt="15px"
-              mb="20px"
+              mb="10px"
               bg="#104eb86e"
               padding="10px"
               borderRadius="15px"
-              boxShadow="0px 0px 10px 5px rgba(0, 0, 255, 0.4)"
+              boxShadow="0px 0px 10px 5px rgb(139 184 223)"
             >
               <Heading
                 as="h1"
@@ -54,8 +57,9 @@ export default function HomePage() {
                 fontSize={{ base: '18px', md: '30px' }}
                 align="center"
                 width="100%"
+                textTransform="uppercase"
               >
-                Welcome to phonebook
+                Welcome
               </Heading>
               <Text
                 as="i"
@@ -64,7 +68,16 @@ export default function HomePage() {
                 fontSize={{ base: '16px', md: '24px' }}
                 align="center"
               >
-                This application helps you save the phone numbers
+                <Highlight
+                  query="phonebook"
+                  styles={{
+                    textTransform: 'uppercase',
+                    color: '#192655',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  This phonebook helps you save the phone numbers
+                </Highlight>
               </Text>
               <Text
                 as="b"
@@ -89,13 +102,13 @@ export default function HomePage() {
                 textShadow="0 0 7px #fFF,0 0 10px #fFF,0 0 21px #fFF,0 0 42px #98E4FF,0 0 82px #98E4FF,0 0 92px #98E4FF,0 0 102px #98E4FF,0 0 151px #98E4FF"
                 _hover={{
                   color: '#fff',
-                  background:'#0cc0df',
+                  background: '#0cc0df',
                   textShadow:
                     '0 0 7px #A0E9FF, 0 0 10px #A0E9FF, 0 0 21px #A0E9FF, 0 0 42px #ffffff, 0 0 82px #5271ff, 0 0 92px #ffffff, 0 0 102px #fff, 0 0 151px #fff',
                 }}
                 _activeLink={{
                   color: '#fff',
-                   background:'#0cc0df',
+                  background: '#0cc0df',
                   textShadow:
                     '0 0 7px #A0E9FF, 0 0 10px #A0E9FF, 0 0 21px #A0E9FF, 0 0 42px #ffffff, 0 0 82px #5271ff, 0 0 92px #ffffff, 0 0 102px #fff, 0 0 151px #fff',
                 }}
@@ -126,13 +139,13 @@ export default function HomePage() {
                 textShadow="0 0 7px #fFF,0 0 10px #fFF,0 0 21px #fFF,0 0 42px #98E4FF,0 0 82px #98E4FF,0 0 92px #98E4FF,0 0 102px #98E4FF,0 0 151px #98E4FF"
                 _hover={{
                   color: '#fff',
-                  background:'#0cc0df',
+                  background: '#0cc0df',
                   textShadow:
                     '0 0 7px #A0E9FF, 0 0 10px #A0E9FF, 0 0 21px #A0E9FF, 0 0 42px #ffffff, 0 0 82px #5271ff, 0 0 92px #ffffff, 0 0 102px #fff, 0 0 151px #fff',
                 }}
                 _activeLink={{
                   color: '#fff',
-                  background:'#0cc0df',
+                  background: '#0cc0df',
                   textShadow:
                     '0 0 7px #A0E9FF, 0 0 10px #A0E9FF, 0 0 21px #A0E9FF, 0 0 42px #ffffff, 0 0 82px #5271ff, 0 0 92px #ffffff, 0 0 102px #fff, 0 0 151px #fff',
                 }}
@@ -141,6 +154,17 @@ export default function HomePage() {
                 Register
               </Link>
             </VStack>
+          </Center>
+          <Center>
+            <Image
+              width="650px"
+              maxWidth="100%"
+              objectFit="contain"
+              src={bg}
+              borderRadius="15px"
+              boxShadow="0px 0px 10px 5px rgb(139 184 223)"
+              alt="background image"
+            />
           </Center>
         </Box>
       )}
