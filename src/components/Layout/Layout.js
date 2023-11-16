@@ -12,7 +12,7 @@ export const Layout = () => {
           <Flex w="100%" h="100%" align="center" justify="center">
             <Spinner
               size="xl"
-              color="#188C69"
+              color="#104eb86e"
               thickness="4px"
               speed="0.65s"
               emptyColor="gray.200"

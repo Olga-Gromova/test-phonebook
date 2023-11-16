@@ -30,7 +30,7 @@ export default function HomePage() {
         >
           <Spinner
             size="xl"
-            color="#188C69"
+            color="#104eb86e"
             thickness="4px"
             speed="0.65s"
             emptyColor="gray.200"
@@ -163,7 +163,7 @@ export default function HomePage() {
               src={bg}
               borderRadius="15px"
               boxShadow="0px 0px 10px 5px rgb(139 184 223)"
-              alt="background image"
+              alt="Sample of App"
             />
           </Center>
         </Box>
