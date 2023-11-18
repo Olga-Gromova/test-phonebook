@@ -44,7 +44,6 @@ export default function HomePage() {
               mw="400px"
               mt="15px"
               mb="10px"
-              bg="#104eb86e"
               padding="10px"
               borderRadius="15px"
               boxShadow="0px 0px 10px 5px rgb(139 184 223)"
@@ -62,7 +61,6 @@ export default function HomePage() {
                 Welcome
               </Heading>
               <Text
-                as="i"
                 color="#192655"
                 fontFamily="Merriweather Sans"
                 fontSize={{ base: '16px', md: '24px' }}
@@ -114,7 +112,7 @@ export default function HomePage() {
                 }}
                 to="/login"
               >
-                Log In
+                Log in
               </Link>
               <Text
                 color="#192655"
@@ -151,7 +149,7 @@ export default function HomePage() {
                 }}
                 to="/register"
               >
-                Register
+                Sign up
               </Link>
             </VStack>
           </Center>

@@ -5,9 +5,9 @@ import { useDispatch } from 'react-redux';
 import { editContact } from 'redux/contacts/operations';
 import * as yup from 'yup';
 import { FormStyled } from './EditedContact.styled';
+import { Button, Input, Icon } from '@chakra-ui/react';
 
 import React from 'react';
-import { Input } from '@chakra-ui/react';
 
 const schema = yup
   .object({
@@ -65,7 +65,6 @@ const EditContact = ({ id, toggleEdit, name, number }) => {
         autoFocus
         autoComplete="name"
       />
-
       <Input
         border="solid"
         borderColor="#89d3da"
@@ -94,9 +93,30 @@ const EditContact = ({ id, toggleEdit, name, number }) => {
         {...register('number')}
         autoComplete="number"
       />
-      <button className="saveButton" type="submit">
-        <VscSaveAs />
-      </button>
+      <Button
+        borderRadius="50%"
+        mt="auto"
+        w={{ base: '30px', md: '50px' }}
+        h={{ base: '30px', md: '50px' }}
+        minWidth="auto"
+        bg="#80B3FF"
+        color="white"
+        _hover={{
+          borderColor: '#3182ce',
+          boxShadow: '0px 0px 10px 5px rgba(0, 0, 255, 0.4)',
+        }}
+        _focus={{
+          borderColor: '#3182ce',
+          boxShadow: '0px 0px 10px 5px rgba(0, 0, 255, 0.4)',
+        }}
+        _active={{
+          borderColor: '#3182ce',
+          boxShadow: '0px 0px 10px 5px rgba(0, 0, 255, 0.4)',
+        }}
+        type="submit"
+      >
+        <Icon as={VscSaveAs} w={5} h={5} color="white" />
+      </Button>
     </FormStyled>
   );
 };

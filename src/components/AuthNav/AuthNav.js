@@ -20,9 +20,9 @@ export const AuthNav = () => {
           textShadow:
             '0 0 7px #A0E9FF, 0 0 10px #A0E9FF, 0 0 21px #A0E9FF, 0 0 42px #ffffff, 0 0 82px #5271ff, 0 0 92px #ffffff, 0 0 102px #fff, 0 0 151px #fff',
         }}
-        to="/register"
+        to="/login"
       >
-        Register
+        Log in
       </Link>
       <Link
         as={NavLink}
@@ -40,10 +40,11 @@ export const AuthNav = () => {
           textShadow:
             '0 0 7px #A0E9FF, 0 0 10px #A0E9FF, 0 0 21px #A0E9FF, 0 0 42px #ffffff, 0 0 82px #5271ff, 0 0 92px #ffffff, 0 0 102px #fff, 0 0 151px #fff',
         }}
-        to="/login"
+        to="/register"
       >
-        Log In
+        Sign up
       </Link>
+      
     </HStack>
   );
 };

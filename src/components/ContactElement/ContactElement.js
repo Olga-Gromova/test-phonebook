@@ -9,6 +9,8 @@ import {
   Text,
   Circle,
   Icon,
+  useToast,
+  Box,
 } from '@chakra-ui/react';
 import { DeleteIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
@@ -19,11 +21,26 @@ export const ContactElement = ({ id, name, number }) => {
   const dispatch = useDispatch();
   const [isDelete, setIsDelete] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
+  const toast = useToast();
   const onDelete = id => {
     setIsDelete(true);
     dispatch(deleteContact(id))
       .unwrap()
       .then(() => setIsDelete(false));
+    toast({
+      position: 'top',
+      render: () => (
+        <Box
+          color="#A86464"
+          p={3}
+          bg="#EBEF95"
+          borderRadius="10px"
+          textAlign="center"
+        >
+          The contact {name} was deleted successfully
+        </Box>
+      ),
+    });
   };
   const toggleEdit = () => {
     setIsEdit(!isEdit);
@@ -34,6 +51,7 @@ export const ContactElement = ({ id, name, number }) => {
     <Flex
       as="li"
       borderBottom="1px"
+      borderColor="#192655"
       paddingY="8px"
       justify="space-between"
       align="center"
@@ -63,6 +81,7 @@ export const ContactElement = ({ id, name, number }) => {
               mr="10px"
             >
               <Text
+                color="#192655"
                 fontFamily="Merriweather Sans"
                 fontWeight={300}
                 fontSize={{ base: '14px', md: '18px' }}
@@ -70,6 +89,7 @@ export const ContactElement = ({ id, name, number }) => {
                 {name}
               </Text>
               <Text
+                color="#192655"
                 fontFamily="Merriweather Sans"
                 fontWeight={300}
                 fontSize={{ base: '14px', md: '18px' }}
